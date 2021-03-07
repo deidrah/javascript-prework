@@ -58,6 +58,12 @@ function playGame(playerInput){
   }
 
   displayResult(computerMove, playerMove);
+  if (playerWin == 3 || aiWin == 3) {
+    document.getElementById('play-rock').setAttribute('disabled', '');
+    document.getElementById('play-paper').setAttribute('disabled', '');
+    document.getElementById('play-scissors').setAttribute('disabled', '');
+    alert('Koniec gry, Twój wynik: ' + playerWin + ', wynik komputera: ' + aiWin );
+  };
 }
 
 document.getElementById('play-rock').addEventListener('click', function(){
@@ -72,12 +78,9 @@ document.getElementById('play-scissors').addEventListener('click', function(){
   playGame(3);
 });
 
-document.getElementById('reset--scores').addEventListener('click', function() {
-  clearMessages();
-  playerWin = 0;
-  aiWin = 0;
-  drawsNo = 0;
-  draws.textContent = drawsNo;
-  wins.textContent = playerWin;
-  losses.textContent = aiWin;
+
+
+document.getElementById('reset--scores').addEventListener('click', function(){
+  resetScores();
 });
+
