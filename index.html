@@ -15,7 +15,16 @@
       <button id="play-scissors">Nożyce</button>
     </div>
 		<div id="messages"></div>
-    <div id="result"></div>
+    <div id="result">
+			<div class="scoreboard--container">
+				<div id="scoreboard">
+					<p class="scoreboard-row" id="playerWins"><strong>Twoje wygrane: </strong><span id="wins">0</span></p>
+					<p class="scoreboard-row" id="playerDraws"><strong>Liczba wszystkich ruchów:  </strong><span id="draws">0</span></p>
+					<p class="scoreboard-row" id="playerLosses"><strong>Twoje przegrane: </strong><span id="losses">0</span></p>
+				</div>
+			</div>
+			<button id="reset--scores">Resetuj wyniki</button>
+		</div>
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
