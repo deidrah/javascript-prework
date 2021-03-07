@@ -1,0 +1,87 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Raleway:wght@100;300;400;600&family=Signika&display=swap");
+/* Variables */
+/* Global */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #EDEFF15E;
+  color: #576671;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 20px auto;
+  padding: 40px;
+  position: relative;
+  border: 3px dashed #17DAA3;
+  text-align: center;
+}
+
+/* Game */
+#buttons button {
+  display: inline-block;
+  margin: 24px auto 0 auto;
+  padding: 10px 35px;
+  border: 0;
+  border-radius: 50px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.25s;
+}
+
+#buttons button:hover, #buttons button:focus {
+  transform: translateY(-0.25em);
+}
+
+#buttons button:hover i, #buttons button:focus i {
+  filter: brightness(80%);
+}
+
+#buttons button i {
+  font-size: 40px;
+  background: #17DAA3;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+button:disabled i {
+  background: #87949E !important;
+  color: #576671 !important;
+}
+
+#reset--scores {
+  display: inline-block;
+  margin: 24px auto 0 auto;
+  padding: 10px 35px;
+  border: 0;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+#reset--scores:hover, #reset--scores:focus {
+  transform: translateY(-0.25em);
+}
+
+#reset--scores:hover i, #reset--scores:focus i {
+  filter: brightness(80%);
+}
+/*# sourceMappingURL=style.css.map */
