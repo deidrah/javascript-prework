@@ -1,12 +1,13 @@
+{
 let playerWin = 0;
 let aiWin = 0;
 let drawsNo = 0;
 
-function playGame(playerInput){
+const playGame = function(playerInput){
   clearMessages();
-  let wins = document.getElementById('wins');
-  let draws = document.getElementById('draws');
-  let losses = document.getElementById('losses');
+  const wins = document.getElementById('wins');
+  const draws = document.getElementById('draws');
+  const losses = document.getElementById('losses');
   function getMoveName(argMoveId){
     if(argMoveId == 1){
       return 'kamień';
@@ -21,21 +22,21 @@ function playGame(playerInput){
     }
   }
 
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
+  const randomNumber = Math.floor(Math.random() * 3 + 1);
 
   console.log('Wylosowana liczba to: ' + randomNumber);
 
-  let computerMove = getMoveName(randomNumber);
+  const computerMove = getMoveName(randomNumber);
 
   printMessage('Mój ruch to: ' + computerMove);
 
   console.log('Gracz wpisał: ' + playerInput);
 
-  let playerMove = getMoveName(playerInput);
+  const playerMove = getMoveName(playerInput);
 
   printMessage('Twój ruch to: ' + playerMove);
 
-  function displayResult(argComputerMove, argPlayerMove) {
+  const displayResult = function(argComputerMove, argPlayerMove) {
     if ((argComputerMove == 'kamień' && argPlayerMove == 'papier') || (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') || (argComputerMove == 'papier' && argPlayerMove == 'nożyce')){
       printMessage('Ty wygrywasz!');
       drawsNo++;
@@ -78,9 +79,14 @@ document.getElementById('play-scissors').addEventListener('click', function(){
   playGame(3);
 });
 
-
-
 document.getElementById('reset--scores').addEventListener('click', function(){
-  resetScores();
+	resetScores();
+  playerWin = 0;
+  aiWin = 0;
+  drawsNo = 0;
+  draws.textContent = drawsNo;
+  wins.textContent = playerWin;
+  losses.textContent = aiWin;
 });
 
+}
